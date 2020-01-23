@@ -1243,6 +1243,11 @@ bool is_empty_dir_inode(struct inode *inode)
 }
 
 #ifdef CONFIG_UNICODE
+/*
+ * Determine if the name of a dentry should be casefolded.
+ *
+ * Return: if names will need casefolding
+ */
 bool needs_casefold(const struct inode *dir)
 {
 	return IS_CASEFOLDED(dir) && dir->i_sb->s_encoding &&

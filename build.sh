@@ -63,6 +63,7 @@ fi
 # Modify anykernel.sh to replace device names
 sed -i "s/device\.name1=.*/device.name1=${DEVICE}/" AnyKernel3/anykernel.sh
 sed -i "s/device\.name2=.*/device.name2=${DEVICE}in/" AnyKernel3/anykernel.sh
+sed -i "s/supported\.versions=.*/supported.versions=14-15/" AnyKernel3/anykernel.sh
 
 cp $kernel AnyKernel3
 cp $dtbo AnyKernel3
